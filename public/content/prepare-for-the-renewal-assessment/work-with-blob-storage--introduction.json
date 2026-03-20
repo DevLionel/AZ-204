@@ -1,0 +1,5 @@
+{
+  "title": "01. Introduction",
+  "html": "<h1><a id=\"_yby7ojly2ea3\"></a><strong>Introduction</strong></h1><p>Completed</p><p>100 XP</p><ul><li>3 minutes</li></ul><p>The Azure Storage client libraries for .NET offer a convenient interface for making calls to Azure Storage.</p><p>After completing this module, you'll be able to:</p><ul><li>Create an application to create and manipulate data by using the Azure Storage client library for Blob storage.</li><li>Manage container properties and metadata by using .NET and REST.</li></ul>",
+  "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--introduction"
+}

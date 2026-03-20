@@ -1,0 +1,5 @@
+{
+  "title": "01. Introduction",
+  "html": "<h1><a id=\"_4b9d8p5zsrn4\"></a><strong>Introduction</strong></h1><p>Completed</p><p>100 XP</p><ul><li>3 minutes</li></ul><p>This module is an introduction to both client and server-side programming on Azure Cosmos DB.</p><p>After completing this module, you'll be able to:</p><ul><li>Identify classes and methods used to create resources</li><li>Create resources in Azure Cosmos DB for NoSQL using .NET</li><li>Write stored procedures, triggers, and user-defined functions by using JavaScript</li><li>Implement change feed notifications</li></ul>",
+  "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--introduction"
+}

@@ -1,0 +1,522 @@
+{
+  "modules": [
+    {
+      "title": "Requirements",
+      "slug": "requirements",
+      "documents": [
+        {
+          "title": "Requirements",
+          "anchorId": "requirements--requirements",
+          "slug": "requirements"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Virtual Machines",
+      "slug": "virtual-machines",
+      "documents": [
+        {
+          "title": "Azure Virtual Machine",
+          "anchorId": "virtual-machines--azure-virtual-machine",
+          "slug": "azure-virtual-machine"
+        },
+        {
+          "title": "Information Virtual Machines",
+          "anchorId": "virtual-machines--information-virtual-machines",
+          "slug": "information-virtual-machines"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Azure App Service",
+      "slug": "azure-app-service",
+      "documents": [
+        {
+          "title": "Azure App Service",
+          "anchorId": "azure-app-service--azure-app-service",
+          "slug": "azure-app-service"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Containers",
+      "slug": "containers",
+      "documents": [
+        {
+          "title": "Containers",
+          "anchorId": "containers--containers",
+          "slug": "containers"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Azure Function Apps",
+      "slug": "azure-function-apps",
+      "documents": [
+        {
+          "title": "Azure Function App",
+          "anchorId": "azure-function-apps--azure-function-app",
+          "slug": "azure-function-app"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Azure Storage Accounts",
+      "slug": "azure-storage-accounts",
+      "documents": [
+        {
+          "title": "Azure storage accounts",
+          "anchorId": "azure-storage-accounts--azure-storage-accounts",
+          "slug": "azure-storage-accounts"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "CosmosDB",
+      "slug": "cosmosdb",
+      "documents": [
+        {
+          "title": "CosmosDB",
+          "anchorId": "cosmosdb--cosmosdb",
+          "slug": "cosmosdb"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Azure Authentication",
+      "slug": "azure-authentication",
+      "documents": [
+        {
+          "title": "Azure authentication",
+          "anchorId": "azure-authentication--azure-authentication",
+          "slug": "azure-authentication"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Data Encryption with Storage accounts and SQL Database",
+      "slug": "data-encryption-with-storage-accounts-and-sql-database",
+      "documents": [
+        {
+          "title": "Data encryption",
+          "anchorId": "data-encryption-with-storage-accounts-and-sql-database--data-encryption",
+          "slug": "data-encryption"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Caching and Content Delivery Networks",
+      "slug": "caching-and-content-delivery-networks",
+      "documents": [
+        {
+          "title": "Redis Caching",
+          "anchorId": "caching-and-content-delivery-networks--redis-caching",
+          "slug": "redis-caching"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Troubleshoot solutions by Application Insights",
+      "slug": "troubleshoot-solutions-by-application-insights",
+      "documents": [
+        {
+          "title": "Application Insights",
+          "anchorId": "troubleshoot-solutions-by-application-insights--application-insights",
+          "slug": "application-insights"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Monitoring and Logging",
+      "slug": "monitoring-and-logging",
+      "documents": [
+        {
+          "title": "Monitoring and Logging",
+          "anchorId": "monitoring-and-logging--monitoring-and-logging",
+          "slug": "monitoring-and-logging"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Consuming Azure Services",
+      "slug": "consuming-azure-services",
+      "documents": [
+        {
+          "title": "Naamloos document",
+          "anchorId": "consuming-azure-services--naamloos-document",
+          "slug": "naamloos-document"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Development event-based solutions",
+      "slug": "development-event-based-solutions",
+      "documents": [
+        {
+          "title": "Azure Event Grid & Azure Event Hub",
+          "anchorId": "development-event-based-solutions--azure-event-grid-azure-event-hub",
+          "slug": "azure-event-grid-azure-event-hub"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Application Messaging",
+      "slug": "application-messaging",
+      "documents": [
+        {
+          "title": "Azure Storage Queues & Service Bus Queue",
+          "anchorId": "application-messaging--azure-storage-queues-service-bus-queue",
+          "slug": "azure-storage-queues-service-bus-queue"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Notes",
+      "slug": "notes",
+      "documents": [
+        {
+          "title": "Notes",
+          "anchorId": "notes--notes",
+          "slug": "notes"
+        }
+      ],
+      "subModules": []
+    },
+    {
+      "title": "Prepare for the renewal assessment",
+      "slug": "prepare-for-the-renewal-assessment",
+      "documents": [],
+      "subModules": [
+        {
+          "title": "Develop Azure Functions",
+          "slug": "develop-azure-functions",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--develop-azure-functions--introduction",
+              "slug": "develop-azure-functions--introduction"
+            },
+            {
+              "title": "02. Explore Azure Functions development",
+              "anchorId": "prepare-for-the-renewal-assessment--develop-azure-functions--explore-azure-functions-development",
+              "slug": "develop-azure-functions--explore-azure-functions-development"
+            },
+            {
+              "title": "03. Create triggers and bindings",
+              "anchorId": "prepare-for-the-renewal-assessment--develop-azure-functions--create-triggers-and-bindings",
+              "slug": "develop-azure-functions--create-triggers-and-bindings"
+            },
+            {
+              "title": "04. Connect functions to Azure services",
+              "anchorId": "prepare-for-the-renewal-assessment--develop-azure-functions--connect-functions-to-azure-services",
+              "slug": "develop-azure-functions--connect-functions-to-azure-services"
+            },
+            {
+              "title": "05. Exercise - Create an Azure Function by using Visual Studio Code",
+              "anchorId": "prepare-for-the-renewal-assessment--develop-azure-functions--exercise-create-an-azure-function-by-using-visual-studio-code",
+              "slug": "develop-azure-functions--exercise-create-an-azure-function-by-using-visual-studio-code"
+            }
+          ]
+        },
+        {
+          "title": "Implement Azure Key Vault",
+          "slug": "implement-azure-key-vault",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-key-vault--introduction",
+              "slug": "implement-azure-key-vault--introduction"
+            },
+            {
+              "title": "02. Explore Azure Key Vault",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-key-vault--explore-azure-key-vault",
+              "slug": "implement-azure-key-vault--explore-azure-key-vault"
+            },
+            {
+              "title": "03. Discover Azure Key Vault best practices",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-key-vault--discover-azure-key-vault-best-practices",
+              "slug": "implement-azure-key-vault--discover-azure-key-vault-best-practices"
+            },
+            {
+              "title": "04. Authenticate to Azure Key Vault",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-key-vault--authenticate-to-azure-key-vault",
+              "slug": "implement-azure-key-vault--authenticate-to-azure-key-vault"
+            },
+            {
+              "title": "05. Exercise - Create and retrieve secrets from Azure Key Vault",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-key-vault--exercise-create-and-retrieve-secrets-from-azure-key-vault",
+              "slug": "implement-azure-key-vault--exercise-create-and-retrieve-secrets-from-azure-key-vault"
+            }
+          ]
+        },
+        {
+          "title": "Implement Azure App Configuration",
+          "slug": "implement-azure-app-configuration",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--introduction",
+              "slug": "implement-azure-app-configuration--introduction"
+            },
+            {
+              "title": "02. Explore the Azure App Configuration service",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--explore-the-azure-app-configuration-service",
+              "slug": "implement-azure-app-configuration--explore-the-azure-app-configuration-service"
+            },
+            {
+              "title": "03. Create paired keys and values",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--create-paired-keys-and-values",
+              "slug": "implement-azure-app-configuration--create-paired-keys-and-values"
+            },
+            {
+              "title": "04. Manage application features",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--manage-application-features",
+              "slug": "implement-azure-app-configuration--manage-application-features"
+            },
+            {
+              "title": "05. Secure app configuration data",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--secure-app-configuration-data",
+              "slug": "implement-azure-app-configuration--secure-app-configuration-data"
+            },
+            {
+              "title": "06. Exercise - Retrieve configuration settings from Azure App Configuration",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--exercise-retrieve-configuration-settings-from-azure-app-configuration",
+              "slug": "implement-azure-app-configuration--exercise-retrieve-configuration-settings-from-azure-app-configuration"
+            }
+          ]
+        },
+        {
+          "title": "Monitor app performance",
+          "slug": "monitor-app-performance",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--introduction",
+              "slug": "monitor-app-performance--introduction"
+            },
+            {
+              "title": "02. Explore Application Insights",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--explore-application-insights",
+              "slug": "monitor-app-performance--explore-application-insights"
+            },
+            {
+              "title": "03. Discover log-based metrics",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--discover-log-based-metrics",
+              "slug": "monitor-app-performance--discover-log-based-metrics"
+            },
+            {
+              "title": "04. Instrument an app for monitoring",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--instrument-an-app-for-monitoring",
+              "slug": "monitor-app-performance--instrument-an-app-for-monitoring"
+            },
+            {
+              "title": "05. Select an availability test",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--select-an-availability-test",
+              "slug": "monitor-app-performance--select-an-availability-test"
+            },
+            {
+              "title": "06. Troubleshoot app performance by using Application Map",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--troubleshoot-app-performance-by-using-application-map",
+              "slug": "monitor-app-performance--troubleshoot-app-performance-by-using-application-map"
+            },
+            {
+              "title": "07. Exercise - Monitor an application with autoinstrumentation",
+              "anchorId": "prepare-for-the-renewal-assessment--monitor-app-performance--exercise-monitor-an-application-with-autoinstrumentation",
+              "slug": "monitor-app-performance--exercise-monitor-an-application-with-autoinstrumentation"
+            }
+          ]
+        },
+        {
+          "title": "Implement Azure Container Apps",
+          "slug": "implement-azure-container-apps",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--introduction",
+              "slug": "implement-azure-container-apps--introduction"
+            },
+            {
+              "title": "02. Explore Azure Container Apps",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--explore-azure-container-apps",
+              "slug": "implement-azure-container-apps--explore-azure-container-apps"
+            },
+            {
+              "title": "03. Exercise - Deploy a container to Azure Container Apps with the Azure CLI",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--exercise-deploy-a-container-to-azure-container-apps-with-the-azure-cli",
+              "slug": "implement-azure-container-apps--exercise-deploy-a-container-to-azure-container-apps-with-the-azure-cli"
+            },
+            {
+              "title": "04. Explore containers in Azure Container Apps",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--explore-containers-in-azure-container-apps",
+              "slug": "implement-azure-container-apps--explore-containers-in-azure-container-apps"
+            },
+            {
+              "title": "05. Implement authentication and authorization in Azure Container Apps",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--implement-authentication-and-authorization-in-azure-container-apps",
+              "slug": "implement-azure-container-apps--implement-authentication-and-authorization-in-azure-container-apps"
+            },
+            {
+              "title": "06. Manage revisions and secrets in Azure Container Apps",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--manage-revisions-and-secrets-in-azure-container-apps",
+              "slug": "implement-azure-container-apps--manage-revisions-and-secrets-in-azure-container-apps"
+            },
+            {
+              "title": "07. Explore Dapr integration with Azure Container Apps",
+              "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--explore-dapr-integration-with-azure-container-apps",
+              "slug": "implement-azure-container-apps--explore-dapr-integration-with-azure-container-apps"
+            }
+          ]
+        },
+        {
+          "title": "Manage container images in Azure Container Registry",
+          "slug": "manage-container-images-in-azure-container-registry",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--manage-container-images-in-azure-container-registry--introduction",
+              "slug": "manage-container-images-in-azure-container-registry--introduction"
+            },
+            {
+              "title": "02. Discover the Azure Container Registry",
+              "anchorId": "prepare-for-the-renewal-assessment--manage-container-images-in-azure-container-registry--discover-the-azure-container-registry",
+              "slug": "manage-container-images-in-azure-container-registry--discover-the-azure-container-registry"
+            },
+            {
+              "title": "03. Explore storage capabilities",
+              "anchorId": "prepare-for-the-renewal-assessment--manage-container-images-in-azure-container-registry--explore-storage-capabilities",
+              "slug": "manage-container-images-in-azure-container-registry--explore-storage-capabilities"
+            },
+            {
+              "title": "04. Build and manage containers with tasks",
+              "anchorId": "prepare-for-the-renewal-assessment--manage-container-images-in-azure-container-registry--build-and-manage-containers-with-tasks",
+              "slug": "manage-container-images-in-azure-container-registry--build-and-manage-containers-with-tasks"
+            },
+            {
+              "title": "05. Exercise - Build and run a container image with Azure Container Registry Tasks",
+              "anchorId": "prepare-for-the-renewal-assessment--manage-container-images-in-azure-container-registry--exercise-build-and-run-a-container-image-with-azure-container-registry-tasks",
+              "slug": "manage-container-images-in-azure-container-registry--exercise-build-and-run-a-container-image-with-azure-container-registry-tasks"
+            }
+          ]
+        },
+        {
+          "title": "Run container images in Azure Container Instances",
+          "slug": "run-container-images-in-azure-container-instances",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--introduction",
+              "slug": "run-container-images-in-azure-container-instances--introduction"
+            },
+            {
+              "title": "02. Explore Azure Container Instances",
+              "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--explore-azure-container-instances",
+              "slug": "run-container-images-in-azure-container-instances--explore-azure-container-instances"
+            },
+            {
+              "title": "03. Exercise - Deploy a container to Azure Container Instances using Azure CLI commands",
+              "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--exercise-deploy-a-container-to-azure-container-instances-using-azure-cli-commands",
+              "slug": "run-container-images-in-azure-container-instances--exercise-deploy-a-container-to-azure-container-instances-using-azure-cli-commands"
+            },
+            {
+              "title": "04. Set environment variables in container instances",
+              "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--set-environment-variables-in-container-instances",
+              "slug": "run-container-images-in-azure-container-instances--set-environment-variables-in-container-instances"
+            },
+            {
+              "title": "05. Mount an Azure file share in Azure Container Instances",
+              "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--mount-an-azure-file-share-in-azure-container-instances",
+              "slug": "run-container-images-in-azure-container-instances--mount-an-azure-file-share-in-azure-container-instances"
+            }
+          ]
+        },
+        {
+          "title": "Work with Azure Cosmos DB",
+          "slug": "work-with-azure-cosmos-db",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--introduction",
+              "slug": "work-with-azure-cosmos-db--introduction"
+            },
+            {
+              "title": "02. Explore Microsoft_",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--explore-microsoft",
+              "slug": "work-with-azure-cosmos-db--explore-microsoft"
+            },
+            {
+              "title": "03. Exercise - Create resources in Azure Cosmos DB for NoSQL using_",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--exercise-create-resources-in-azure-cosmos-db-for-nosql-using",
+              "slug": "work-with-azure-cosmos-db--exercise-create-resources-in-azure-cosmos-db-for-nosql-using"
+            },
+            {
+              "title": "04. Create stored procedures",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--create-stored-procedures",
+              "slug": "work-with-azure-cosmos-db--create-stored-procedures"
+            },
+            {
+              "title": "05. Create triggers and user-defined functions",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--create-triggers-and-user-defined-functions",
+              "slug": "work-with-azure-cosmos-db--create-triggers-and-user-defined-functions"
+            },
+            {
+              "title": "06. Explore change feed in Azure Cosmos DB",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-azure-cosmos-db--explore-change-feed-in-azure-cosmos-db",
+              "slug": "work-with-azure-cosmos-db--explore-change-feed-in-azure-cosmos-db"
+            }
+          ]
+        },
+        {
+          "title": "Work with Blob storage",
+          "slug": "work-with-blob-storage",
+          "documents": [
+            {
+              "title": "01. Introduction",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--introduction",
+              "slug": "work-with-blob-storage--introduction"
+            },
+            {
+              "title": "02. Explore Azure Blob storage client library",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--explore-azure-blob-storage-client-library",
+              "slug": "work-with-blob-storage--explore-azure-blob-storage-client-library"
+            },
+            {
+              "title": "03. Create a client object",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--create-a-client-object",
+              "slug": "work-with-blob-storage--create-a-client-object"
+            },
+            {
+              "title": "04. Exercise - Create Blob storage resources by using the_",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--exercise-create-blob-storage-resources-by-using-the",
+              "slug": "work-with-blob-storage--exercise-create-blob-storage-resources-by-using-the"
+            },
+            {
+              "title": "05. Manage container properties and metadata by using_",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--manage-container-properties-and-metadata-by-using",
+              "slug": "work-with-blob-storage--manage-container-properties-and-metadata-by-using"
+            },
+            {
+              "title": "06. Set and retrieve properties and metadata for blob resources by using REST",
+              "anchorId": "prepare-for-the-renewal-assessment--work-with-blob-storage--set-and-retrieve-properties-and-metadata-for-blob-resources-by-using-rest",
+              "slug": "work-with-blob-storage--set-and-retrieve-properties-and-metadata-for-blob-resources-by-using-rest"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

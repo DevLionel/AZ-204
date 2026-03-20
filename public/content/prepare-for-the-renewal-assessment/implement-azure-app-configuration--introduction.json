@@ -1,0 +1,5 @@
+{
+  "title": "01. Introduction",
+  "html": "<h1><a id=\"_9fjy8es40ra3\"></a><strong>Introduction</strong></h1><p>Completed</p><p>100 XP</p><ul><li>3 minutes</li></ul><p>Azure App Configuration provides a service to centrally manage application settings and feature flags.</p><p>After completing this module, you'll be able to:</p><ul><li>Explain the benefits of using Azure App Configuration</li><li>Describe how Azure App Configuration stores information</li><li>Implement feature management</li><li>Securely access your app configuration information</li><li>Retrieve configuration settings from Azure App Configuration</li></ul>",
+  "anchorId": "prepare-for-the-renewal-assessment--implement-azure-app-configuration--introduction"
+}

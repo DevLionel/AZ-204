@@ -1,0 +1,5 @@
+{
+  "title": "01. Introduction",
+  "html": "<h1><a id=\"_cojrmxwx5omi\"></a><strong>Introduction</strong></h1><p>Completed</p><p>100 XP</p><ul><li>3 minutes</li></ul><p>Azure Container Instances (ACI) offers the fastest and simplest way to run a container in Azure, without having to manage any virtual machines and without having to adopt a higher-level service.</p><p>After completing this module, you'll be able to:</p><ul><li>Describe the benefits of Azure Container Instances and how resources are grouped</li><li>Deploy a container instance in Azure by using the Azure CLI</li><li>Start and stop containers using policies</li><li>Set environment variables in your container instances</li><li>Mount file shares in your container instances</li></ul>",
+  "anchorId": "prepare-for-the-renewal-assessment--run-container-images-in-azure-container-instances--introduction"
+}

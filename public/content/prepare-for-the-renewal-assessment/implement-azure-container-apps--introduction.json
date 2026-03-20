@@ -1,0 +1,5 @@
+{
+  "title": "01. Introduction",
+  "html": "<h1><a id=\"_vtqr129niix2\"></a><strong>Introduction</strong></h1><p>Completed</p><p>100 XP</p><ul><li>1 minute</li></ul><p>Azure Container Apps is a serverless container service that supports microservice applications and robust autoscaling capabilities without the overhead of managing complex infrastructure.</p><p>After completing this module, you'll be able to:</p><ul><li>Describe the features benefits of Azure Container Apps</li><li>Deploy container app in Azure by using the Azure CLI</li><li>Utilize Azure Container Apps built-in authentication and authorization</li><li>Create revisions and implement app secrets</li></ul>",
+  "anchorId": "prepare-for-the-renewal-assessment--implement-azure-container-apps--introduction"
+}

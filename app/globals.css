@@ -1,26 +1,71 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --azure-blue: #0078d4;
+  --azure-blue-dark: #005a9e;
+  --azure-blue-light: #50a8ff;
+  --sidebar-width: 280px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-azure: #0078d4;
+  --color-azure-dark: #005a9e;
+  --color-azure-light: #50a8ff;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
 }
+
+/* Scroll offset voor ankers (header hoogte) */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+}
+
+/* Progress bar animatie */
+@keyframes progress-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Prose overrides voor Word-inhoud */
+.prose h1 { color: #0078d4; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+.prose h2 { color: #005a9e; }
+.prose h3 { color: #1a3a5c; }
+.prose table { font-size: 0.9em; }
+.prose img { max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.prose code { background: #f0f4f8; color: #d63031; padding: 0.1em 0.4em; border-radius: 3px; font-size: 0.875em; }
+.prose pre { background: #1e293b; color: #e2e8f0; }
+.prose pre code { background: transparent; color: inherit; }
+.prose blockquote { border-left-color: #0078d4; background: #f0f7ff; padding: 0.5rem 1rem; border-radius: 0 4px 4px 0; }
+
+/* Actieve sidebar link */
+.sidebar-link-active {
+  background: rgba(0, 120, 212, 0.15) !important;
+  color: #50a8ff !important;
+  border-left: 3px solid #50a8ff;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: #475569; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* Sidebar scrollbar */
+.sidebar::-webkit-scrollbar-track { background: #1e2a3b; }
