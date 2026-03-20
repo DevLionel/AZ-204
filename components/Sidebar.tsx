@@ -198,7 +198,7 @@ export default function Sidebar({ navigation }: SidebarProps) {
 
       {/* Footer */}
       <div className="px-4 py-3 border-t border-slate-700/60">
-        <p className="text-xs text-slate-500 text-center">Microsoft AZ-204 · 2026</p>
+        <p className="text-xs text-slate-500 text-center">Powered by Lionel · 2026</p>
       </div>
     </nav>
   );
