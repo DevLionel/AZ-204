@@ -3,11 +3,12 @@ import Link from 'next/link';
 import {
   getNavigation,
   getModuleBySlug,
-  getDocumentContent,
   getAllDocumentsForModule,
   getAllModuleSlugs,
   type SubModule,
+  type DocumentMeta,
 } from '@/lib/content';
+import DocumentContent from '@/components/DocumentContent';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -26,13 +27,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-type DocEntry = {
-  slug: string;
-  title: string;
-  anchorId: string;
-  groupTitle?: string;
-  html: string;
-};
+type DocEntry = DocumentMeta & { groupTitle?: string };
 
 function SubModuleGrid({ subModules }: { subModules: SubModule[] }) {
   return (
@@ -44,15 +39,12 @@ function SubModuleGrid({ subModules }: { subModules: SubModule[] }) {
             key={sub.slug}
             className="bg-white rounded-xl border border-slate-200 p-5 flex flex-col gap-3 hover:border-azure hover:shadow-md transition-all duration-200"
           >
-            {/* Sub-module header */}
             <div className="flex items-start gap-3">
               <div className="w-8 h-8 rounded-lg bg-azure text-white flex items-center justify-center text-xs font-bold shrink-0">
                 {String(i + 1).padStart(2, '0')}
               </div>
               <h3 className="text-sm font-semibold text-slate-800 leading-snug">{sub.title}</h3>
             </div>
-
-            {/* Document links */}
             <ul className="space-y-1 pl-1">
               {sub.documents.map(doc => (
                 <li key={doc.anchorId}>
@@ -85,16 +77,9 @@ export default async function ModulePage({ params }: Props) {
   const prevModule = currentIndex > 0 ? modules[currentIndex - 1] : null;
   const nextModule = currentIndex < modules.length - 1 ? modules[currentIndex + 1] : null;
 
-  const allDocs = getAllDocumentsForModule(module);
-  const loadedDocs: DocEntry[] = [];
-
-  for (const doc of allDocs) {
-    const content = getDocumentContent(slug, doc.slug);
-    if (content) {
-      loadedDocs.push({ ...doc, html: content.html });
-    }
-  }
-
+  // Only metadata — no HTML loaded server-side
+  const allDocs: DocEntry[] = getAllDocumentsForModule(module);
+  const totalDocs = allDocs.length;
   const hasSubModules = module.subModules.length > 0;
 
   return (
@@ -110,16 +95,16 @@ export default async function ModulePage({ params }: Props) {
       <div className="bg-linear-to-r from-slate-900 to-[#1a3a5c] text-white rounded-2xl px-8 py-10 mb-10 shadow-xl">
         <h1 className="text-2xl lg:text-3xl font-bold mb-3">{module.title}</h1>
         <p className="text-slate-300 text-sm">
-          {loadedDocs.length} {loadedDocs.length === 1 ? 'document' : 'documenten'}
+          {totalDocs} {totalDocs === 1 ? 'document' : 'documenten'}
           {hasSubModules && ` · ${module.subModules.length} sub-modules`}
         </p>
 
         {/* Inhoudsopgave alleen voor modules zónder sub-modules */}
-        {!hasSubModules && loadedDocs.length > 1 && (
+        {!hasSubModules && allDocs.length > 1 && (
           <div className="mt-6 pt-6 border-t border-white/10">
             <p className="text-xs uppercase tracking-widest text-slate-400 mb-3">Inhoudsopgave</p>
             <div className="flex flex-wrap gap-2">
-              {loadedDocs.map(doc => (
+              {allDocs.map(doc => (
                 <a
                   key={doc.anchorId}
                   href={`#${doc.anchorId}`}
@@ -133,20 +118,17 @@ export default async function ModulePage({ params }: Props) {
         )}
       </div>
 
-      {/* Sub-module kaartgrid (alleen voor modules met sub-modules) */}
-      {hasSubModules && (
-        <SubModuleGrid subModules={module.subModules} />
-      )}
+      {/* Sub-module kaartgrid */}
+      {hasSubModules && <SubModuleGrid subModules={module.subModules} />}
 
-      {/* Document secties — gegroepeerd per sub-module indien aanwezig */}
+      {/* Document secties — HTML lazy-loaded client-side */}
       <div className="space-y-12">
         {hasSubModules ? (
           module.subModules.map((sub, subIndex) => {
-            const subDocs = loadedDocs.filter(d => d.groupTitle === sub.title);
+            const subDocs = allDocs.filter(d => d.groupTitle === sub.title);
             if (subDocs.length === 0) return null;
             return (
               <div key={sub.slug}>
-                {/* Sub-module scheidingskop */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-8 h-8 rounded-lg bg-slate-200 text-slate-600 flex items-center justify-center text-xs font-bold shrink-0">
                     {String(subIndex + 1).padStart(2, '0')}
@@ -156,15 +138,30 @@ export default async function ModulePage({ params }: Props) {
                 </div>
                 <div className="space-y-8">
                   {subDocs.map((doc, i) => (
-                    <DocumentSection key={doc.anchorId} doc={doc} index={i} />
+                    <DocumentContent
+                      key={doc.anchorId}
+                      moduleSlug={slug}
+                      docSlug={doc.slug}
+                      anchorId={doc.anchorId}
+                      title={doc.title}
+                      index={i}
+                      groupTitle={sub.title}
+                    />
                   ))}
                 </div>
               </div>
             );
           })
         ) : (
-          loadedDocs.map((doc, i) => (
-            <DocumentSection key={doc.anchorId} doc={doc} index={i} />
+          allDocs.map((doc, i) => (
+            <DocumentContent
+              key={doc.anchorId}
+              moduleSlug={slug}
+              docSlug={doc.slug}
+              anchorId={doc.anchorId}
+              title={doc.title}
+              index={i}
+            />
           ))
         )}
       </div>
@@ -192,41 +189,5 @@ export default async function ModulePage({ params }: Props) {
         ) : <div />}
       </div>
     </div>
-  );
-}
-
-function DocumentSection({ doc, index }: { doc: DocEntry; index: number }) {
-  return (
-    <section
-      id={doc.anchorId}
-      data-section
-      className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden"
-    >
-      <div className="px-8 py-6 border-b border-slate-100 bg-slate-50/80 flex items-start gap-4">
-        <div className="w-8 h-8 rounded-full bg-azure text-white flex items-center justify-center text-sm font-bold shrink-0 mt-0.5">
-          {index + 1}
-        </div>
-        <div className="flex-1 min-w-0">
-          <h2 className="text-lg font-bold text-slate-800 leading-snug">{doc.title}</h2>
-        </div>
-        <a
-          href={`#${doc.anchorId}`}
-          className="text-slate-400 hover:text-azure text-xs transition-colors shrink-0 mt-1"
-          title="Directe link"
-        >
-          #
-        </a>
-      </div>
-      <div className="px-8 py-8">
-        {doc.html ? (
-          <div
-            className="prose prose-slate max-w-none prose-headings:scroll-mt-20"
-            dangerouslySetInnerHTML={{ __html: doc.html }}
-          />
-        ) : (
-          <p className="text-slate-400 italic">Document kon niet worden geladen.</p>
-        )}
-      </div>
-    </section>
   );
 }

@@ -9,9 +9,11 @@
 const mammoth = require('mammoth');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const ROOT_DIR = path.resolve(__dirname, '../../'); // Azure AZ-204 map
 const OUTPUT_DIR = path.resolve(__dirname, '../public/content');
+const IMAGES_DIR = path.resolve(__dirname, '../public/content/images');
 
 // Hulpfunctie: maak een URL-vriendelijke slug van een bestandsnaam
 function toSlug(name) {
@@ -49,12 +51,24 @@ function stripHtml(html) {
 async function parseDocx(filePath) {
   try {
     console.log(`  Parsing: ${path.basename(filePath)}`);
+
+    if (!fs.existsSync(IMAGES_DIR)) {
+      fs.mkdirSync(IMAGES_DIR, { recursive: true });
+    }
+
     const result = await mammoth.convertToHtml(
       { path: filePath },
       {
-        convertImage: mammoth.images.inline(async (image) => {
-          const buffer = await image.read('base64');
-          return { src: `data:${image.contentType};base64,${buffer}` };
+        convertImage: mammoth.images.imgElement(async (image) => {
+          const buffer = await image.read();
+          const ext = image.contentType.split('/')[1] || 'png';
+          const hash = crypto.createHash('md5').update(buffer).digest('hex');
+          const filename = `${hash}.${ext}`;
+          const imgPath = path.join(IMAGES_DIR, filename);
+          if (!fs.existsSync(imgPath)) {
+            fs.writeFileSync(imgPath, buffer);
+          }
+          return { src: `/content/images/${filename}` };
         }),
       }
     );
